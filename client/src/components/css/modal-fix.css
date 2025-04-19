@@ -1,0 +1,64 @@
+/* Modal fixes */
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 1.75rem auto;
+  max-width: 500px;
+  z-index: 1050;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  outline: 0;
+  z-index: 1060;
+}
+
+.modal-header, 
+.modal-body, 
+.modal-footer {
+  position: relative;
+  z-index: 1060;
+}
+
+.modal-footer button,
+.modal-footer a {
+  position: relative;
+  z-index: 1070 !important;
+  pointer-events: auto !important;
+}
+
+/* Fix for links and buttons in modals */
+.modal-content a,
+.modal-content button {
+  pointer-events: auto !important;
+} 
